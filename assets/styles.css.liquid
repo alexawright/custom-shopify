@@ -229,7 +229,10 @@ select {
   font-size:13px; 
   display:inline-block; 
   color:#222; 
-  font-family:Helvetica,Arial,sans-serif; 
+  width:130px;
+  letter-spacing:.5px;
+  color: rgb(126, 126, 126);
+  font-family:avenir,Helvetica,Arial,sans-serif; 
   vertical-align:top; 
   height: auto;
   border:1px solid #ccc; 
@@ -238,7 +241,7 @@ select {
   border-radius:1px; 
   -webkit-appearance: none;
   padding: 4px 30px 4px 10px;
-  background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) no-repeat 90% #ffffff;
+  background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) no-repeat 90% white;
 }
 @-moz-document url-prefix() { select { padding:6px;  } } /* Firefox fix */
 select:focus, select.focus { 
@@ -383,7 +386,7 @@ strong { font-weight: 700; }
 em { font-style: italic; }
 
 /* 1.7 - Icons */
-.icon-social { float: left; display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -9999px; margin-right: 10px; margin-bottom: 10px;}
+.icon-social { float: right; display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -9999px; margin-right: 10px; margin-bottom: 10px;}
 
 {% if settings.social_icons == "light" %}
 .icon-social { background: url('{{ 'social-icons-dark-bg.png' | asset_url }}') no-repeat; }
