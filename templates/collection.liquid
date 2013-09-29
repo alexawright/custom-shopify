@@ -31,7 +31,6 @@
           {% capture col_url%}{% if collection.url.size == 0 %}/collections/all{%else%}{{collection.url}}{%endif%}{%endcapture%}
           {% if collection.all_tags.size > 0 %}
           <div class="browse-tags">
-          	<label>Browse:</label>
           	<select name="collection_tags" id="collection_tags" class="loc_on_change">
           		<option value="{{ col_url }}">All items</option>
           		{% for tag in collection.all_tags %}

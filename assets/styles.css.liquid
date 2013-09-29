@@ -548,7 +548,7 @@ ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
 {% endif %}
 {% if settings.navigation_alignment == "below" %}
 .logo { max-width: 966px; }
-.logo a img, .logo h1 a { display: block; margin: 0 auto; }
+.logo a img, .logo h1 a { display: block; margin: -10px auto 10px; }
 .logo h1 { text-align: center; }
 {% endif %}
 {% if settings.logo_center %}
@@ -689,7 +689,7 @@ font-size: 12px; letter-spacing:1px }
 #collection .browse-tags label { float: left; display: block; margin: 1px 8px 0 0; }
 @-moz-document url-prefix() {
   #collection .browse-tags label { margin: 7px 8px 0 0; }
-  #collection .browse-tags select { float: right; height: 30px !important; line-height: 30px !important; }
+  #collection .browse-tags select { float: right; height: 50px !important; line-height: 30px !important; }
 }
 .pagination { text-align: center; margin: 0 0 30px 0; padding: 0; }
 .pagination li { display: inline; padding: 0 12px; font-size: 14px; }
