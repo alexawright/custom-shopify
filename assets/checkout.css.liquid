@@ -34,7 +34,7 @@ ul,ol { margin:0; padding:0; }
 
 .row:before, .row:after, .clearfix:before, .clearfix:after {content:"\0020";display:block;height:0;visibility:hidden}
 .clearfix:after, .row:after { clear:both; }
-.clearfix, .row { zoom:1; }
+.clearfix, .row { zoom:1; clear: both; }
 
 {% if settings.use_custom_bg_image %}
 {% if settings.background_image_display == "tiled" %}

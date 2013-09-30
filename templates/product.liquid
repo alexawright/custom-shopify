@@ -99,7 +99,7 @@
       <div class="description">
         {{ product.description }}
       </div>
-      
+  
       <div class="purchase">
         <h2 class="price" id="price-preview">{{ product.price_min | money }}{% if product.price_min < product.compare_at_price_min %} <del>{{ product.compare_at_price_min | money }}</del>{% endif %}</h2>
       </div>
@@ -114,7 +114,8 @@
         <!-- Begin product options -->
         <div class="product-options">
         
-          <div class="select clearfix"{% if hide_default_title %} style="display:none"{% endif %}>
+
+          <div class="select form-group"{% if hide_default_title %} style="display:none"{% endif %}>
             <select id="product-select" name="id">
               {% for variant in product.variants %}
               <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
@@ -123,14 +124,14 @@
           </div>
           
           {% if settings.display_quantity_dropdown %}
-          <div class="selector-wrapper">
+          <div class="selector-wrapper form-group">
             <label>Quantity</label>
             <input id="quantity" type="number" name="quantity" value="1"  min="1" class="tc item-quantity" />
           </div>
           {% endif %}
           
-          <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
-            <div class="purchase">
+          <div class="clearfix purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
+            <div class="purchase pull-right">
               {% unless product.available %}
               <p>Sold Out</p>
               {% else %}
