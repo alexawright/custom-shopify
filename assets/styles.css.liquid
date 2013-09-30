@@ -229,7 +229,7 @@ select {
   font-size:13px; 
   display:inline-block; 
   color:#222; 
-  width:130px;
+  width:auto;
   letter-spacing:.5px;
   color: rgb(126, 126, 126);
   font-family:avenir,Helvetica,Arial,sans-serif; 
@@ -240,7 +240,7 @@ select {
   -webkit-border-radius:1px; 
   border-radius:1px; 
   -webkit-appearance: none;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 40px 4px 10px;
   background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) no-repeat 90% white;
 }
 @-moz-document url-prefix() { select { padding:6px;  } } /* Firefox fix */
@@ -715,7 +715,7 @@ font-size: 12px; letter-spacing:1px }
 .breadcrumb { font-family: avenir; font-size: 11px; margin: 0 0 20px 0; }
 .breadcrumb .arrow-space { margin: -2px 6px 0; font-size: 10px; opacity: .5; filter:alpha(opacity=50); }
 .breadcrumb a { color: {{ settings.body_font_color }}; }
-.purchase h2.price { margin: 0 10px 0; display: block; font-size: 20px !important; text-align: left; color: {{ settings.price_color }}; }
+.purchase h2.price { margin: 0 10px 0; display: block; font-size: 20px !important; text-align: left; color: #525252; }
 .details .price { color: {{ settings.price_color }}; }
 #product .form-group { float: left; width: auto; display: block;}
 #product .form-group label { line-height: 35px; float: left; margin:0 20px 0 20px;}
@@ -774,8 +774,8 @@ div.errors { margin-bottom: 15px; }
 .sidebar .article a { display: block; }
 .sidebar .tags li { margin: 0; }
 .article img { width: 100%; margin-bottom: 20px;}
-.article h1 { font-size: 26px; }
-.article h1 a { display: block; color: {{ settings.link_color }}; }
+.article h1 { font-size: 18px; color: black}
+.article h1 a { display: block; color: black; }
 .article h1 .article-title { font-size: 12px; text-transform: none; display: block; }
 .article h1 a:hover { color: {{ settings.link_hover_color }}; }
 .article h1 .date, .article-body h1 .date { font-size: 15px; font-style: italic; letter-spacing:1px; text-transform: none; font-family: {{ settings.regular_font }}; }

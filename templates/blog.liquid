@@ -7,6 +7,7 @@
       {% for article in blog.articles %}
       <div class="article">
         <h1><a href="{{ article.url }}">{{ article.title }}</a> <span class="date" style="display: block;">{{ article.published_at | date: "%B %d %Y" }}{% if article.comments_enabled? %}, <span>{{ article.comments_count }} {{ article.comments_count | pluralize: "Comment", "Comments" }}</span>{% endif %}</span></h1>
+      <hr class="divider" />
         {{ article.excerpt_or_content }}
       </div>
       <hr class="divider" />
