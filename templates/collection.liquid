@@ -7,7 +7,6 @@
       
       <!-- Begin breadcrumb -->
       <div class="breadcrumb clearfix">
-        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="url"> 
         <span class="arrow-space">&#62;</span>
         <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>       
         
@@ -30,15 +29,6 @@
         {% if settings.collection_tags %}
           {% capture col_url%}{% if collection.url.size == 0 %}/collections/all{%else%}{{collection.url}}{%endif%}{%endcapture%}
           {% if collection.all_tags.size > 0 %}
-          <div class="browse-tags">
-          	<select name="collection_tags" id="collection_tags" class="loc_on_change">
-          		<option value="{{ col_url }}">All items</option>
-          		{% for tag in collection.all_tags %}
-          			<option value="{{col_url}}/{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{%endif%}>{{ tag }}</option>
-          		{% endfor %}
-          	</select>
-          </div>
-          {% endif %}
         {% endif %}
       </div>
       <!-- End sort collection -->
@@ -52,6 +42,20 @@
     </div>
   </div>
   <!-- End collection info -->
+
+
+    <div class="clearfix">
+      {% if collection.all_tags.size > 0 %}
+        <div class="browse-tags">
+          <select name="collection_tags" id="collection_tags" class="loc_on_change">
+            <option value="{{ col_url }}">All items</option>
+            {% for tag in collection.all_tags %}
+              <option value="{{col_url}}/{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{%endif%}>{{ tag }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        {% endif %}
+    </div>
   
   <!-- Begin no products -->
   {% if collection.products.size == 0 %}

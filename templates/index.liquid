@@ -51,7 +51,7 @@
 <!-- End intro -->
 {% endif %}
       
-<div class="products">
+<div class="product">
   {% for product in collections[settings.frontpage_collection].products %}
   {% include 'product-loop' with settings.frontpage_collection %}
   {% endfor %}
