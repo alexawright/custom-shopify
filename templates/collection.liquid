@@ -33,17 +33,6 @@
       </div>
       <!-- End sort collection -->
       
-      <!-- Begin collection description -->
-      {% if collection.description != "" %}
-        {{ collection.description }}
-      {% endif %}
-      <!-- End collection description -->
-      
-    </div>
-  </div>
-  <!-- End collection info -->
-
-
     <div class="clearfix">
       {% if collection.all_tags.size > 0 %}
         <div class="browse-tags">
@@ -56,6 +45,22 @@
         </div>
         {% endif %}
     </div>
+      
+      <!-- Begin collection description -->
+      {% if collection.description != "" %}
+        {{ collection.description }}
+      {% endif %}
+      <!-- End collection description -->
+      
+    </div>
+  </div>
+
+
+
+  <!-- End collection info -->
+
+
+
   
   <!-- Begin no products -->
   {% if collection.products.size == 0 %}

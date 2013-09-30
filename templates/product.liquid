@@ -127,11 +127,11 @@
           {% endif %}
           
           <div class="clearfix purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
-            <div class="purchase pull-left">
+            <div class="purchase">
               <h2 class="price" id="price-preview">{{ product.price_min | money }}{% if product.price_min < product.compare_at_price_min %} <del>{{ product.compare_at_price_min | money }}</del>{% endif %}</h2>
             </div>
 
-            <div class="purchase pull-right">
+            <div class="purchase purchase-btn">
               {% unless product.available %}
               <p>Sold Out</p>
               {% else %}
