@@ -20,11 +20,12 @@
     </div>
     <!-- End breadcrumb -->
     <!-- Begin product photos -->
-    <div class="{% if product.images.size == 1 or settings.thumbnails_position == 'below' %}span6{% else %}span5{% endif %}">
+    <div class="{% if product.images.size == 1 or settings.thumbnails_position == 'below' %}span7{% else %}span5{% endif %}">
       
       <!-- Begin featured image -->
       <div class="image featured">
         {% if settings.enable_product_image_zoom %}
+        <a href="{{ product.featured_image | product_img_url: 'original' }}" class="cloud-zoom" rel="position: 'inside', showTitle: 'false'" id="placeholder">
         <a href="{{ product.featured_image | product_img_url: 'original' }}" class="cloud-zoom" rel="position: 'inside', showTitle: 'false'" id="placeholder">
           <img src="{{ product.featured_image | product_img_url: 'original' }}" alt="{{ product.featured_image.alt | escape }}" />
         </a>
@@ -92,7 +93,7 @@
     
     
     <!-- Begin description -->
-    <div class="span6">
+    <div class="span5">
       
       <h1 class="title">{{ product.title }}</h1>
       
@@ -100,9 +101,6 @@
         {{ product.description }}
       </div>
   
-      <div class="purchase">
-        <h2 class="price" id="price-preview">{{ product.price_min | money }}{% if product.price_min < product.compare_at_price_min %} <del>{{ product.compare_at_price_min | money }}</del>{% endif %}</h2>
-      </div>
       
       {% assign hide_default_title = false %}
       {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
@@ -131,6 +129,10 @@
           {% endif %}
           
           <div class="clearfix purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
+            <div class="purchase pull-left">
+              <h2 class="price" id="price-preview">{{ product.price_min | money }}{% if product.price_min < product.compare_at_price_min %} <del>{{ product.compare_at_price_min | money }}</del>{% endif %}</h2>
+            </div>
+
             <div class="purchase pull-right">
               {% unless product.available %}
               <p>Sold Out</p>
@@ -138,13 +140,14 @@
               <input type="submit" id="add-to-cart" class="btn" name="add" value="Add to cart" />
               {% endunless %}
             </div>
-          </div>
+            
           
         </div>
         <!-- End product options -->
         
       </form>
       
+
 
       {% if settings.show_social %}
       <!-- Begin social buttons -->
@@ -155,6 +158,10 @@
       {% endif %}
     
     </div>
+
+     <div class="purchase pull-right">
+      <p><a href="/collections/all">Contiue Shopping &#10141;</a></p>
+      </div>
     <!-- End description -->
     
   </div>
