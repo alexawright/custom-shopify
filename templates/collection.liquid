@@ -25,7 +25,6 @@
       
       <!-- Begin sort collection -->
       <div class="clearfix">
-        <h1 class="collection-title">{{ collection.title }}</h1>
         {% if settings.collection_tags %}
           {% capture col_url%}{% if collection.url.size == 0 %}/collections/all{%else%}{{collection.url}}{%endif%}{%endcapture%}
           {% if collection.all_tags.size > 0 %}
