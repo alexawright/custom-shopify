@@ -319,9 +319,10 @@ h2 {
   margin: 0 auto 31px;
   line-height: 35px;}
 h3 { 
+  font-family: avenir;
+  font-size: 14px;
+  font-weight: 500;
   color: {{ settings.header_color }}; 
-  font-weight:{{ settings.header_weight }}; 
-  font-size:{{ settings.footer_heading_font_size }}; 
   line-height:{{ settings.footer_heading_line_height }}; 
 }
 h4 { 
@@ -376,11 +377,11 @@ h9, h9 a {
 h10 {
   font-family: adobe garamond pro, times, times new roman;
   font-weight: 400;
-  letter-spacing: 1.5px;
-  font-size: 16px;
+  letter-spacing: 1px;
+  font-size: 15px;
   border-bottom: 1px solid rgb(204, 204, 204);
   padding: 15px 25px;
-  color: rgb(78, 78, 78);
+  color: rgb(54, 54, 54);
   font-style: italic;
   margin: auto;
   text-align: center;
@@ -630,10 +631,16 @@ hr.divider { margin: 15px 0; background: {{ settings.border_color }}; height: 1p
 footer { width: 996px; margin: 0 auto; }
 .row { margin: 0 0 20px 0; }
 
-.row.stockist p, .row.stockist a { 
+.row.stockist p { 
   text-align:center; 
   font-family: avenir;
   font-size: 13px;
+  line-height: 1.7em;
+  font-weight: 300;
+}
+.row.stockist a { 
+  text-align:center; 
+  font-family: avenir;
   line-height: 1.7em;
   font-weight: 300;
 }
@@ -641,9 +648,49 @@ footer { width: 996px; margin: 0 auto; }
   text-align:center; 
   font-size: 14px; 
   font-weight: 600;
+  font-family: avenir;
+  text-transform: uppercase;
   color: #2A2A2A;
   letter-spacing: 1px;
+  font-style: normal;
 }
+.contact-us h1 { 
+  text-align:left; 
+  font-size: 14px; 
+  font-weight: 600;
+  font-family: avenir;
+  text-transform: uppercase;
+  color: #2A2A2A;
+  letter-spacing: 1px;
+  font-style: normal;
+  line-height: 10px;
+}
+.row.friends {
+  margin-top: 20px;
+}
+.friends h1 { 
+  text-align:center; 
+  font-size: 14px; 
+  font-weight: 600;
+  font-family: avenir;
+  text-transform: uppercase;
+  color: #2A2A2A;
+  letter-spacing: 1px;
+  font-style: normal;
+  line-height: 10px;
+}
+.friends a { 
+  text-align:center; 
+  font-family: adobe garamond pro;
+  font-size: 14px;
+  line-height: 1.7em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.span4.contact, .span8.contact { background: rgb(240, 240, 240);}
+.span4.contact p, .span8.contact p { padding: 18px; text-align: left;}
 
 
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 { display: block; float: left; margin: 0 15px; }
@@ -875,21 +922,22 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 #product .form-group label { line-height: 35px; float: left; margin:0 20px 0 20px;}
 #product .featured { margin-bottom: 15px; text-align: center; }
 #product .featured img { width: 100% !important;}
-#product .description { font-size: 13px; margin-bottom: 15px; font-family: avenir; font-weight: 200; line-height:1.7em;}
+#product .description { font-size: 12px; margin-bottom: 15px; font-family: avenir; font-weight: 200; line-height:1.8em;}
 #product .thumbs .image { margin-bottom: 15px; }
 #product .thumbs .image:nth-child(3n+4) { clear: left; }
 #product h3.collection-title {
   font-family:avenir;
-  margin-top: -25px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-align: center;
   font-weight:500;
   color: {{ settings.header_color }}; 
   font-size:{{ settings.main_heading_font_size }}; 
-  line-height: 25px;
+  line-height: 25px; 
+  margin-top: 20px;
   font-size: 18px; 
-}
+  padding-bottom: 15px; 
+  border-bottom: 1px {{ settings.border_style }} {{ settings.border_color }}; }
+{% if settings.show_photo_border %}
 .image a { display: block; border: 1px solid {{ settings.product_photo_border_color }}; }
 .image a img { vertical-align: middle; margin: 0 auto; }
 {% endif %}
