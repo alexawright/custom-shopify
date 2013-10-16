@@ -351,29 +351,64 @@ h7 {
   font-style: italic;
 }
 
-h8, h8 a {
+.collection-tile-shop {
   font-family: avenir;
   font-weight: 100;
   letter-spacing: 1.5px;
-  background: black;
   text-transform: uppercase;
   font-size: 11px;
-  padding: 10px 25px;
-  color: white;
-  ;
+  color: black;
+  line-height: 1.5em;
 }
 
-h9, h9 a {
-  font-family: avenir;
-  font-weight: 100;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-size: 11px;
-  padding: 10px 25px;
-  color: black;
-  font-style:italic;
-  line-height:1.5em;
+.collection-tile {
+  position: relative;
+  margin-bottom: 30px !important;
 }
+
+.collection-tile a span {
+  font-family: adobe garamond pro;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  font-size: 22px;
+  color: white;
+  line-height: 1.5em;
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 18px;
+  text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.79);
+}
+
+.collection-tile a span:hover {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition:opacity 2s;
+}
+
+.collection-divider {
+  margin: 20px 0;
+  background: {{ settings.border_color }}; 
+  height: 1px; border: 0; 
+}
+
+.text-on-line {
+  font-family: avenir;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(66, 66, 66);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: white;
+  position: relative;
+  bottom: -33px;
+  display: inline-block;
+  padding: 0 20px;
+} 
+
 h10 {
   font-family: adobe garamond pro, times, times new roman;
   font-weight: 400;
@@ -510,7 +545,7 @@ strong { font-weight: 500; }
 em { font-style: italic; }
 
 /* 1.7 - Icons */
-.icon-social { float: right; display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -9999px; margin-right: 10px; margin-bottom: 10px;}
+.icon-social { float: right; display: block; width: 32px; height: 32px; overflow: hidden; text-indent: -9999px; margin: 0 0 10px 10px; }
 
 {% if settings.social_icons == "light" %}
 .icon-social { background: url('{{ 'social-icons-dark-bg.png' | asset_url }}') no-repeat; }
@@ -651,6 +686,15 @@ footer { width: 996px; margin: 0 auto; }
   font-family: avenir;
   text-transform: uppercase;
   color: #2A2A2A;
+  letter-spacing: 1px;
+  font-style: normal;
+}
+.product-categories h1 { 
+  text-align:center; 
+  font-size: 13px; 
+  font-weight: 600;
+  font-family: avenir;
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-style: normal;
 }
@@ -851,7 +895,9 @@ footer ul li { color:white; font-weight:600; text-transform:uppercase; font-fami
 footer .btn.newsletter { font-size: 11px; border-radius: 0; font-weight: 500; height: 34px; line-height: 34px; background: #939393; color: {{ settings.newsletter_btn_text_color }}; }
 footer .btn.newsletter:hover { background: {{ settings.newsletter_btn_hover_color }}; color: {{ settings.newsletter_btn_hover_text_color }}; }
 footer #mail { width: 168px; }
-footer .copyright p { margin: 0; font-size: 12px; font-family: times new roman; text-transform: none; font-style: italic;}
+footer .signup-form form { text-align: right; }
+footer .signup-form form h4 { display: inline-block; margin: 10px; color: {{ settings.footer_link_color }}; }
+footer .copyright p { color: {{ settings.footer_link_color }}; margin: 0; font-size: 12px; font-family: times new roman; text-transform: none; font-style: italic;}
 footer .tweet ul li { margin-bottom: 20px; }
 footer .tweet_list { list-style: none; margin: 0; }
 footer .tweet_avatar { display: none; }
