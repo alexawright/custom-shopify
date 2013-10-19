@@ -427,6 +427,7 @@ h10 {
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 15px;
+  border-top: 1px solid rgb(204, 204, 204);
   border-bottom: 1px solid rgb(204, 204, 204);
   padding: 15px 25px;
   color: rgb(54, 54, 54);
@@ -435,6 +436,10 @@ h10 {
   text-align: center;
   display: block;
   margin-top: -17px;
+}
+
+h10.no-top {
+  border-top: 0;
 }
 
 a.next-link {
@@ -759,6 +764,12 @@ ul.horizontal-inline, ol.horizontal-inline { text-align: center; }
 ul.horizontal-inline > li, ol.horizontal-inline > li { display: inline; margin: 0 5px; }
 ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
 
+
+
+/*About Section*/
+
+#press { margin-top: 100px; padding-top: 20px;}
+
 /* =================== */
 /*      SECTION 3      */
 /* =================== */
@@ -777,7 +788,7 @@ ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
   font-size: 10px;
   letter-spacing: 2px; 
 }
-.toolbar #go { position: absolute; width: 11px; height: 11px; border: none; margin: 21px 0 0 5px; box-shadow: none; }
+.toolbar #go { position: absolute; width: 17px; height: 19px; border: none; margin: 21px 0 0 5px; box-shadow: none; }
 .toolbar .or { color: #888; }
 .toolbar .search input#go { padding: 4px 3px; }
 
@@ -917,6 +928,7 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
   min-height: 270px;
   margin-top: -270px;
   padding-top: 20px;
+  border-top: 1px solid #ddd;
 }
 
 @media (max-width: 480px) {
@@ -1094,7 +1106,7 @@ font-size: 11px; }
 #search .results .thumbnail a { float: none; }
 #search .search-field { height: 60px; line-height: 60px; }
 #search .search_box { height: 34px; padding: 0 10px 0 26px; border: none; vertical-align: middle; line-height: normal; font-family: {{ settings.google_header_font | replace: '+', ' ' }}, {{ settings.header_font }}; color: {{ settings.body_font_color }} !important; border: 1px solid {{ settings.search_border_color }}; }
-#search #go { position: absolute; width: 11px; height: 11px; border: none; margin: 21px 0 0 5px; box-shadow: none; }
+#search #go { position: absolute; width: 17px; height: 19px; border: none; margin: 21px 0 0 5px; box-shadow: none; }
 
 /* 3.9 - Customer Pages */
 #customer-account p, #customer-order p { line-height: 14px; }
