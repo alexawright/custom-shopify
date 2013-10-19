@@ -111,7 +111,7 @@
         <div class="product-options">
         
 
-          <div class="select form-group"{% if hide_default_title %} style="display:none"{% endif %}>
+          <div class="selector-wrapper form-group"{% if hide_default_title %} style="display:none"{% endif %}>
             <select id="product-select" name="id">
               {% for variant in product.variants %}
               <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
