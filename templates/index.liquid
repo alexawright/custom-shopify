@@ -1,5 +1,5 @@
 <!-- Begin slider -->
-<div class="span12">
+<div class="col-xs-12">
   <div class="flexslider-container">
     <div class="flexslider">
       <ul class="slides">
@@ -26,14 +26,14 @@
 <!--  custom category selection -->
 
 <div class="row pull-center">
-  <div class="span12">
+  <div class="col-xs-12">
     <span class="text-on-line">Shop by Collection</span>
     <hr class="collection-divider">
   </div>
 </div>
 
 <div class="row">
-  <div class="span6 collection-tile">
+  <div class="col-sm-6 collection-tile">
     <a href="/collections/black-collection"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Persephone.jpg?11700" /> 
 
@@ -41,7 +41,7 @@
     </a>
   </div>
 
-  <div class="span6 collection-tile">
+  <div class="col-sm-6 collection-tile">
     <a href="/collections/black-collection"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Persephone.jpg?11700" /> 
 
@@ -49,7 +49,7 @@
     </a>
   </div>
 
-  <div class="span6 collection-tile">
+  <div class="col-sm-6 collection-tile">
     <a href="/collections/black-collection"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Oreyah.jpg?11698" /> 
 
@@ -57,7 +57,7 @@
     </a>
   </div>
 
-  <div class="span6 collection-tile">
+  <div class="col-sm-6 collection-tile">
     <a href="/collections/black-collection"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Kye.jpg?11698" /> 
 
@@ -70,28 +70,28 @@
 
 <div class="row product-categories">
 
-  <div class="span3">
+  <div class="col-sm-3">
     <a href="/collections/black-collection">
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Necklace.jpg?9533" />
     <h1>Necklaces</h1>
     </a>
   </div>
   
-  <div class="span3">
+  <div class="col-sm-3">
     <a href="/collections/black-collection">
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Bracelets.jpg?9533" />
       <h1>Bracelets</h1>
     </a>
   </div>
 
-  <div class="span3">
+  <div class="col-sm-3">
     <a href="/collections/black-collection">
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Earrings.jpg?9533" />
       <h1>Earrings</h1>
     </a>
   </div>
 
-  <div class="span3">
+  <div class="col-sm-3">
     <a href="/collections/black-collection">
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/Rings.jpg?9556" />
       <h1>Rings</h1>
@@ -101,7 +101,7 @@
 </div>
 
 <div class="row pull-center">
-  <div class="span12">
+  <div class="col-xs-12">
     <span class="text-on-line">The Vanessa Lianne Custom & Commitment Fine Jewelry Collection</span>
     <hr class="collection-divider">
   </div>
@@ -111,19 +111,19 @@
 <div class="row">
 
 
-  <div class="span4 collection-tile">
+  <div class="col-sm-4 collection-tile">
     <a href="/collections"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/custom-2.jpg?13125" /> 
     </a>
   </div>  
 
-  <div class="span4 collection-tile">
+  <div class="col-sm-4 collection-tile">
     <a href="/collections"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/custom-3.jpg?13137" /> 
     </a>
   </div>
 
-  <div class="span4 collection-tile">
+  <div class="col-sm-4 collection-tile">
     <a href="/collections"> 
       <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/custom-1.jpg?13125" /> 
     </a>
@@ -141,7 +141,7 @@
   {% capture fp_image %}fp_image_{{ i }}.jpg{% endcapture %}
   {% capture fp_link %}fp_image_{{ i }}_link{% endcapture %}
   {% capture fp_alt %}fp_image_{{ i }}_alt{% endcapture %}
-  <div class="span4">
+  <div class="col-sm-4">
     <a href="{{ settings[fp_link] }}">
       <img src="{{ fp_image | asset_url }}" alt="{{ settings[fp_alt] | escape }}" />
     </a>
@@ -153,7 +153,7 @@
 
 {% if settings.homepage != blank %}
 <!-- Begin intro -->
-<div class="span12 p20">
+<div class="col-xs-12 p20">
   <div class="intro clearfix">
     <h2>{{ pages[settings.homepage].title }}</h2>
   </div>

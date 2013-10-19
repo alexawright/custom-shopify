@@ -3,7 +3,7 @@
   <!-- Begin empty cart -->
   {% if cart.item_count == 0 %}
   <div class="row">
-    <div class="span12 expanded-message">
+    <div class="col-xs-12 expanded-message">
       <h2>Your cart is empty</h2>
     </div>
   </div>
@@ -12,7 +12,7 @@
   <!-- Begin cart -->
   {% else %}
   <div class="row">
-    <div class="span12">
+    <div class="col-xs-12">
       <h1>Your cart</h1>
 
       <form action="/cart" method="post" id="cartform">
@@ -69,14 +69,14 @@
         {% if settings.display_extra_checkout_buttons or settings.display_cart_note %}
         <div class="row">
           {% if settings.display_extra_checkout_buttons %}
-          <div class="extra-checkout-buttons span6">
+          <div class="extra-checkout-buttons col-sm-6">
             {% if additional_checkout_buttons %}
             {{ content_for_additional_checkout_buttons }}
             {% endif %}
           </div>
           {% endif %}
           {% if settings.display_cart_note %}
-          <div class="span6">
+          <div class="col-sm-6">
             <div class="checkout-buttons clearfix">
               <label for="note">Add special instructions for your order...</label>
               <textarea id="note" name="note" rows="10" cols="50">{{ cart.note }}</textarea>
