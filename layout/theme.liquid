@@ -18,7 +18,7 @@
   {% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <link rel="canonical" href="{{ canonical_url }}" /> 
 
   {% include 'fb-open-graph-tags' %}
@@ -227,11 +227,9 @@
     
     <!-- Begin footer -->
   <div class="footer-wrapper">
-    <footer>
+    <footer class="container">
       <div class="row">
-
-        <div class="col-xs-12 full-border"></div>
-        
+      
         <!-- Begin latest blog post -->
         {% if settings.footer_blog_post and blogs[settings.footer_blog_post].handle == settings.footer_blog_post and blogs[settings.footer_blog_post].articles.size > 0 %}
         {% assign article = blogs[settings.footer_blog_post].articles.first %}
@@ -279,14 +277,15 @@
         </div>
         {% endif %}
 
-        <!-- End newsletter/social -->
-        
-        <!-- Begin copyright -->
-        <div class="col-xs-12 tc copyright">
-          <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }} {% if settings.designed_by %}{% endif %} </p>
-        <!-- End copyright -->
-
+        <!-- End newsletter/social -->      
       </div>
+
+      <!-- Begin copyright -->
+      <div class="col-xs-12 tc copyright">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }} {% if settings.designed_by %}{% endif %} </p>
+      </div>
+      <!-- End copyright -->
+
     </footer>
   </div>
   <!-- End footer -->
