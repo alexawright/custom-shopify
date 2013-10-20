@@ -1,10 +1,19 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h10 class="no-top">
+      Contact Us
+    </h10>
+  </div>
+</div>
+
 <div id="page" class="row">
-  
-  <div class="col-xs-12">
-    <h1>{{ page.title }}</h1>
+
+  <div class="col-sm-4">
     <div class="page-with-contact-form">
-      {{ page.content }}
-            
+      <p>For wholesale inquires, or to contact Vanessa please e-mail:</p>
+      <h1>info@vanessalianne.com</h1>
+      <p>Please call us at:</p>
+      <h1>347.835.3848</h1>           
         {% form 'contact' %}
         {% if form.posted_successfully? %}
         <div class="successForm feedback">
@@ -36,17 +45,19 @@
           </p> 
           <p>
             <label>Message:</label><br/>
-            <textarea rows="15" cols="75" id="contactFormMessage" name="contact[body]" placeholder="Your Message"></textarea>
+            <textarea id="contactFormMessage" name="contact[body]" placeholder="Your Message"></textarea>
           </p>
           <p>
-            <input type="submit" id="contactFormSubmit" value="Send" class="btn" />
+            <input type="submit" id="contactFormSubmit" value="Send" class="btn pull-right" />
           </p>
         </div>
         {% endform %}
       
     </div>
   </div>
-  
+
+  <div class="col-sm-8 contact-img"><img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/contact-small.jpg?14852" /></div>
+
 </div>
 
 
