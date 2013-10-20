@@ -69,10 +69,127 @@ h1 span.subtitle { font-size:{{ settings.body_font_size }}; font-weight:400; }
 #thumbs div { border:0; }
 #products { border-right:1px solid {{ settings.border_color }}; }
 #overview .hint { color:#999; }
+#overview { background:white; }
 #cost, #order-num { color:{{ settings.header_color }}; }
 
 #content { padding:10px 0; }
 #overview, #products, #wallet, #cost, .plisthead { color: #000 !important; }
+#overview { border-bottom: 0;}
+#cost {
+ font-family: adobe garamond pro; 
+ color: #494949;
+ font-size: 30px;
+ text-shadow: none;
+}
+#steps {
+  font-family: adobe garamond pro;
+  font-style: italic;
+  font-size: 19px;
+  color: gray;
+}
+#wallet { font-size: 10px; }
+#addresses h3 { 
+  font-family: avenir; 
+  font-weight: 400; 
+  color: black; 
+  font-size: 17px;
+  letter-spacing: .5px;
+}
+#overview h2 { 
+  font-family: avenir; 
+  font-size:15px;
+  display:none;
+}
+#addresses label { 
+  font-family: avenir; 
+  font-weight: 200; 
+  color: rgb(131, 131, 131); 
+  font-size: 13px; 
+}
+#addresses input { 
+  border: 1px solid #ccc; 
+  background: white; 
+  width: 100%; 
+  padding:2px 8px;
+  font-family: avenir;
+  font-weight: 100;
+} 
+#cancel-purchase, #cancel-purchase a {
+  font-family: avenir;
+}
+#addresses select {
+  display:inline-block; 
+  width:auto;
+  color: black;
+  font-family:avenir;
+  height: auto;
+  font-weight:100;
+  border:1px solid #ccc; 
+  -moz-border-radius:1px; 
+  -webkit-border-radius:1px; 
+  border-radius:1px; 
+  -webkit-appearance: none;
+  padding: 2px 40px 3px 10px;
+  background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) no-repeat 95% white;
+} 
+#email input {  
+  border: 1px solid #ccc; 
+  background: white; 
+  font-family: avenir;
+  font-weight: 100;
+  font-size:15px;
+  padding:2px 8px;
+}
+#thumbs h3 { 
+  font-size: 17px;
+  font-family: adobe garamond pro;
+  font-weight: 500;
+  letter-spacing: .5px;
+  font-style: italic;
+}
+#thumbs span { 
+  font-size: 12px;
+  line-height: 1.7em;
+  color: rgb(138, 138, 138);
+  font-family: avenir;
+}
+#tax_span.hint { 
+  font-size: 12px;
+  line-height: 1.7em;
+  color: rgb(138, 138, 138);
+  font-family: avenir;
+  font-style: none !important;
+}
+#shipping-same span { 
+  font-size: 12px;
+  width: 100%;
+  line-height: 1.7em;
+  color: rgb(138, 138, 138);
+  font-family: avenir;
+}
+#footer p {
+  font-style: italic;
+  font-family: times;
+  margin:50px;
+  font-size:12px;
+}
+#email label { 
+  font-family: avenir; 
+  font-weight: 400; 
+  color: black; 
+  font-size: 17px; 
+}
+.step1 #tagline span { 
+  line-height:2.5em; 
+  font-size: 20px; 
+  font-family: adobe garamond pro; 
+  font-style:italic; 
+  text-align:center;
+  margin-top: 20px;
+}
+#main {
+  border: 5px solid #EEEEEE;
+}
 
 #container.slim #header { width:433px; }
 #container.slim #footer { width:433px; }
