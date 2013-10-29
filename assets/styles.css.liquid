@@ -848,6 +848,9 @@ footer { width: 100%; margin: 0 auto; }
 .row.friends {
   margin-top: 20px;
 }
+.row.friends p {
+  text-align: center;
+}
 .friends h1 { 
   text-align:center; 
   font-size: 14px; 
@@ -1103,9 +1106,9 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 .product .circle, #product .circle { position: absolute; text-transform: uppercase; z-index: 9999; font-size: 11px; line-height: 14px; right: -10px; top: -10px; color: {{ settings.sale_text_color }} !important; padding: 17px 10px; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; font-weight: 700; -webkit-font-smoothing: subpixel-antialiased; }
 .product .circle.sale, #product .circle.sale { font-family: helvetica; background-color: {{ settings.sale_bg_color }}; opacity: .9; filter:alpha(opacity=90); -webkit-font-smoothing: subpixel-antialiased; }
 .breadcrumb { 
-  font-family: avenir; font-size: 13px; margin: 0 0 20px 12px; }
-.breadcrumb .arrow-space { margin: -2px 6px 0; font-size: 10px; opacity: .5; filter:alpha(opacity=50); }
-.breadcrumb a { color: {{ settings.body_font_color }}; }
+  font-family: avenir; font-size: 13px; color: #8D8D8D; margin: 0 0 20px 12px; }
+.breadcrumb .arrow-space { color: #8D8D8D; margin: -2px 6px 0; font-size: 10px; opacity: .5; filter:alpha(opacity=50); }
+.breadcrumb a { color: #8D8D8D;  }
 .purchase { width: 50%; float: left; }
 .purchase-box a { font-style: italic;
   letter-spacing: .06em;
@@ -1149,8 +1152,8 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 #quantity { font-family: avenir,helvetica, arial; color: rgb(99, 99, 99); width: 40px; margin-bottom: 20px; }
 @-moz-document url-prefix() { .product-options select { height: 30px; line-height: 30px; } } /* Firefox fix */
 
-#collection h1 { float: left; display:none;}
-#collection .browse-tags { float: right; margin-bottom: 15px; margin-right: 15px; margin-top: -40px;}
+#collection h1 { float: left; margin-left: 17px;}
+#collection .browse-tags { float: right; margin-bottom: 15px; margin-right: 15px; margin-top: -110px;}
 #collection .browse-tags label { float: left; display: block; margin: 1px 8px 0 0; }
 @-moz-document url-prefix() {
   #collection .browse-tags label { margin: 7px 8px 0 0; }
@@ -1180,6 +1183,8 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 div.errors, .subtext.error { font-weight: 700; color: #954040; }
 div.errors { margin-bottom: 15px; }
 .featured-cart-title { margin-left: 13px; }
+#cart tr.headers { font-style: italic; ;}
+#cart tbody { font-family: avenir; font-size: 15px; font-style: normal;}
 
 /* 3.8 - Blog / Articles / Search */
 .sidebar { display:none;}

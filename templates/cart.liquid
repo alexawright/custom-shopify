@@ -1,5 +1,5 @@
-<div id="cart">
-  
+<div id="cart">  
+  <div class="col-xs-12 pull-center"><img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/vl-full-logo.png?19341" style="width: 300px; text-align: center; margin: auto; opacity: .7; margin-bottom: 0;"></div>
   <!-- Begin empty cart -->
   {% if cart.item_count == 0 %}
   <div class="row">
@@ -18,7 +18,7 @@
       <form action="/cart" method="post" id="cartform">
         <table>
           <thead>
-            <tr>
+            <tr class="headers">
               <th class="image">&nbsp;</th>
               <th class="item">&nbsp;</th>
               <th class="qty">Quantity</th>
