@@ -1307,9 +1307,12 @@ font-size: 11px; }
   #header .logo a img { max-width: 200px; }
   /* .featured img { max-width: 468px !important; } */
   .footer-menu { margin-bottom: 10px; }
+}
+
+/* ipad specific */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)  { 
   .collection-tile a span { display: none; }
   .collection-tile h3 { display: block; }
-
 }
 
 /* 4.3 - Mobile Landscape */
@@ -1345,7 +1348,7 @@ font-size: 11px; }
 }
 
 /* target ipad */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation: landscape) { /* STYLES GO HERE */}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation: landscape) {
   .collection-tile a span { display: none; }
   .collection-tile h3 { display: block; }
 }
