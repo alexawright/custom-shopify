@@ -262,7 +262,7 @@ select {
   width:auto;
   letter-spacing:.5px;
   color: rgb(126, 126, 126);
-  font-family:adobe garamond pro, times;
+  font-family:adobe garamond pro, times, times new roman, serif, times;
   font-style: italic; 
   vertical-align:top; 
   height: auto;
@@ -307,7 +307,7 @@ h1,h2,h3,h4,h5,h6 { font-weight:{{ settings.header_weight }}; color:{{ settings.
 h1,h2,h3,h4,h5,h6,.cart-summary, .toolbar { font-family: {{ settings.google_header_font | replace: '+', ' ' }}, {{ settings.header_font }}; }
 {% endif %}
 h1 { 
-  font-family: adobe garamond pro;
+  font-family: adobe garamond pro, times, times new roman, serif;
   letter-spacing: 1px;
   font-weight: 500;
   color: #2B2B2B;
@@ -326,7 +326,7 @@ h2 {
   margin: 0 auto 31px;
   line-height: 35px;}
 h3 { 
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: {{ settings.header_color }}; 
@@ -347,7 +347,7 @@ h6 {
 }
 
 h7 {
-  font-family: adobe garamond pro, times, times new roman;
+  font-family: adobe garamond pro, times, times new roman, serif, times, times new roman, serif;
   font-weight: 400;
   letter-spacing: 1.5px;
   background: white;
@@ -359,7 +359,7 @@ h7 {
 }
 
 .collection-tile-shop {
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -377,7 +377,7 @@ h7 {
   text-align:center; 
   font-size: 13px; 
   font-weight: 600;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #2B2B2B;
@@ -396,7 +396,7 @@ h7 {
 }
 
 .collection-tile a span {
-  font-family: adobe garamond pro;
+  font-family: adobe garamond pro, times, times new roman, serif;
   font-weight: 100;
   font-style: italic;
   letter-spacing: 1.5px;
@@ -430,7 +430,7 @@ h7 {
 }
 
 .text-on-line {
-  font-family: adobe garamond pro;
+  font-family: adobe garamond pro, times, times new roman, serif;
   font-size: 19px;
   text-align: center;
   color: rgb(66, 66, 66);
@@ -450,10 +450,21 @@ h7 {
   width: 100%;
   letter-spacing:0;
 }
+.page-with-contact-form label {
+  display: none;
+}
+
+html.ie8 .page-with-contact-form label {
+  display: inline-block;
+}
+
 .page-with-contact-form textarea {
   padding:10px 10px;
   width: 100%;
   letter-spacing:0;
+}
+.page-with-contact-form h1 {
+  font-size: 25px;
 }
 .press-image {
   margin-bottom: 30px;
@@ -480,7 +491,7 @@ h7 {
 } 
 .custom-testimonials h1 {
   font-size: 14px;
-  font-family:avenir;
+  font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-style: normal;
   line-height: 23px;
@@ -491,7 +502,7 @@ h7 {
 } 
 .custom-testimonials h4 {
   font-size: 13px;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 0 15px;
   line-height: 22px;
   color: #686868;
@@ -500,7 +511,7 @@ h7 {
 }
 .custom-testimonials h5 {
   font-size: 16px;
-  font-family: adobe garamond pro;
+  font-family: adobe garamond pro, times, times new roman, serif;
   font-style: italic;
   padding: 0 15px;
   line-height: 6px;
@@ -533,7 +544,7 @@ h7 {
 }
 
 h10 {
-  font-family: adobe garamond pro, times, times new roman;
+  font-family: adobe garamond pro, times, times new roman, serif, times, times new roman;
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 18px;
@@ -550,7 +561,7 @@ h10 {
 }
 
 h10.no-top {
-  font-family: adobe garamond pro, times, times new roman;
+  font-family: adobe garamond pro, times, times new roman, serif, times, times new roman;
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 17px;
@@ -573,7 +584,7 @@ a.next-link {
   float: right;
   margin-top: 30px;
   font-size: 16px;
-  font-family: adobe garamond pro, times, times new roman;
+  font-family: adobe garamond pro, times, times new roman, serif, times, times new roman;
 }
 
 a.previous-link {
@@ -583,7 +594,7 @@ a.previous-link {
   display: inline-block;
   margin-top: 30px;
   font-size: 16px;
-  font-family: adobe garamond pro, times, times new roman;
+  font-family: adobe garamond pro, times, times new roman, serif, times, times new roman;
 }
 
 
@@ -635,7 +646,7 @@ h6 .note a {
 p { 
   margin: 0 0 20px 0; 
   text-align: justify;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 200;
   line-height: 1.73em;
@@ -662,7 +673,7 @@ a.btn, input.btn {
   padding:0 20px; 
   color:{{ settings.shop_btn_text_color }}; 
   font-weight: 200;
-  font-family:avenir;
+  font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 11px; 
   text-transform:{{ settings.btn_font_style }}; 
   background:{{ settings.shop_btn_color }}; 
@@ -817,14 +828,14 @@ footer { width: 100%; margin: 0 auto; }
 
 .row.stockist p { 
   text-align:center; 
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.7em;
   font-weight: 300;
 }
 .row.stockist a { 
   text-align:center; 
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.7em;
   font-weight: 300;
 }
@@ -832,7 +843,7 @@ footer { width: 100%; margin: 0 auto; }
   text-align:center; 
   font-size: 14px; 
   font-weight: 600;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #2A2A2A;
   letter-spacing: 1px;
@@ -842,7 +853,7 @@ footer { width: 100%; margin: 0 auto; }
   text-align:center; 
   font-size: 13px; 
   font-weight: 600;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-style: normal;
@@ -852,7 +863,7 @@ footer { width: 100%; margin: 0 auto; }
   text-align:left; 
   font-size: 14px; 
   font-weight: 600;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #2A2A2A;
   letter-spacing: 1px;
@@ -869,7 +880,7 @@ footer { width: 100%; margin: 0 auto; }
   text-align:center; 
   font-size: 14px; 
   font-weight: 600;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #2A2A2A;
   letter-spacing: 1px;
@@ -878,7 +889,7 @@ footer { width: 100%; margin: 0 auto; }
 }
 .friends a { 
   text-align:center; 
-  font-family: adobe garamond pro;
+  font-family: adobe garamond pro, times, times new roman, serif;
   font-size: 14px;
   line-height: 1.7em;
   font-weight: 300;
@@ -913,14 +924,14 @@ ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
 /* 3.1 - Toolbar */
 .toolbar { color: {{ settings.toolbar_text_color }}; font-size: 12px; }
 .toolbar li { float: right; line-height: 60px; list-style: none; padding-left: 25px; margin-bottom: 0 !important; }
-.toolbar a { font-family: avenir; letter-spacing: 1px; color: {{ settings.toolbar_text_color }}; }
+.toolbar a { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: 1px; color: {{ settings.toolbar_text_color }}; }
 .toolbar a:hover { color: gray; }
 .toolbar .search_box { 
   height: 28px; 
   padding: 0 10px 0 26px; 
   border: 1px solid rgb(210, 210, 210); 
   vertical-align: middle; line-height: normal; 
-  font-family: avenir; 
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 2px; 
@@ -950,7 +961,7 @@ nav { position: relative; border-bottom: 1px {{ settings.border_style }} {{ sett
 nav > ul > li { margin-bottom: 0; }
 nav > ul > li > a { 
   text-decoration: none; 
-  font-family:avenir; 
+  font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   text-transform: uppercase; 
   font-weight: 200; 
   letter-spacing:1.5px; 
@@ -963,7 +974,7 @@ nav > ul > li > a {
   font-weight: {{ settings.nav_weight }}; 
   text-transform: {{ settings.nav_font_style }}; }
 {% if settings.dropdown_arrow == "none" %}
-nav > ul > li.dropdown > a { background:none; font-family:avenir; text-transform:uppercase; letter-spacing:1px }
+nav > ul > li.dropdown > a { background:none; font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform:uppercase; letter-spacing:1px }
 {% endif %}
 {% if settings.dropdown_arrow == "light" %}
 nav > ul > li.dropdown > a { padding-right: 15px; margin-right: 10px; background:url('{{ 'arrow-light.png' | asset_url }}') no-repeat 100% 50%; }
@@ -977,7 +988,7 @@ nav > ul > li.dropdown { position:relative; }
 nav > ul > li.dropdown > .dropdown { background: {{ settings.nav_dropdown_background_color }}; list-style: none outside none; display: none; position: absolute; min-width: 180px; z-index: 99999; top: 100%; left: 0%; margin-left: 15px; border: 1px solid {{ settings.border_color }}; }
 nav > ul > li.dropdown:hover > .dropdown { display: block; z-index: 999999; -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10); -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10); box-shadow:0 0 3px rgba(0, 0, 0, 0.10); }
 nav > ul > li.dropdown li { 
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: .5px; 
   list-style: none; 
   margin: 0;
@@ -1032,12 +1043,12 @@ footer > .row > .col-xs-12.full-border { border-top: 1px {{ settings.border_styl
 footer > .row > .col-xs-12 { padding: 10px 0 20px; }
 footer { padding-bottom: 20px; }
 footer .row { margin-bottom: 0; }
-footer, footer p { color: {{ settings.footer_text_color }}; font-family: avenir; text-transform:uppercase; font-size:11px; letter-spacing:1px;}
+footer, footer p { color: {{ settings.footer_text_color }}; font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform:uppercase; font-size:11px; letter-spacing:1px;}
 footer h1, footer h2, footer h3, footer h4, footer h5 { color: {{ settings.footer_heading_color }}; }
 footer a { color: {{ settings.footer_link_color }} !important; }
 footer a:hover { color: {{ settings.footer_link_hover_color }} !important; }
-footer h4 { font-weight:500; font-size: 16px; color:black; text-transform:uppercase; font-family:avenir; font-size:10px; letter-spacing:1.5px; {% if settings.footer_show_underline %} padding-bottom: 10px; border-bottom: 1px {{ settings.border_style }} {{ settings.footer_heading_border_color }};{% endif %} }
-footer ul li { color:white; font-weight:600; text-transform:uppercase; font-family:avenir; font-size:10px; letter-spacing:1.5px; margin-bottom: 5px; 
+footer h4 { font-weight:500; font-size: 16px; color:black; text-transform:uppercase; font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; letter-spacing:1.5px; {% if settings.footer_show_underline %} padding-bottom: 10px; border-bottom: 1px {{ settings.border_style }} {{ settings.footer_heading_border_color }};{% endif %} }
+footer ul li { color:white; font-weight:600; text-transform:uppercase; font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:10px; letter-spacing:1.5px; margin-bottom: 5px; 
   display: block; 
   list-style: none;
   padding: 0 10px 0 0;
@@ -1082,7 +1093,7 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
   margin-bottom: 20px; 
   text-align: center; 
   font-weight: 600; 
-  font-family:avenir;
+  font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .intro p, .intro li { font-family: {{ settings.regular_font }}; font-size: 14px; line-height: 27px; }
 
@@ -1113,21 +1124,21 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: avenir;
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: black;
   font-size: 14px; letter-spacing:1px }
 .product .vendor { font-size: 13px; margin-bottom: 2px; text-align: center; }
 .product .circle, #product .circle { position: absolute; text-transform: uppercase; z-index: 9999; font-size: 11px; line-height: 14px; right: -10px; top: -10px; color: {{ settings.sale_text_color }} !important; padding: 17px 10px; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; font-weight: 700; -webkit-font-smoothing: subpixel-antialiased; }
 .product .circle.sale, #product .circle.sale { font-family: helvetica; background-color: {{ settings.sale_bg_color }}; opacity: .9; filter:alpha(opacity=90); -webkit-font-smoothing: subpixel-antialiased; }
 .breadcrumb { 
-  font-family: avenir; font-size: 13px; color: #8D8D8D; margin: 0 0 20px 12px; }
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #8D8D8D; margin: 0 0 20px 12px; }
 .breadcrumb .arrow-space { color: #8D8D8D; margin: -2px 6px 0; font-size: 10px; opacity: .5; filter:alpha(opacity=50); }
 .breadcrumb a { color: #8D8D8D;  }
 .purchase { width: 50%; float: left; }
 .purchase-box a { font-style: italic;
   letter-spacing: .06em;
   font-size: 15px;
-  font-family:adobe garamond pro, garamond, georgia, times;
+  font-family:adobe garamond pro, times, times new roman, serif, garamond, georgia, times;
   text-align:right; 
   color: #919191;
   font-weight: 100;
@@ -1143,7 +1154,7 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 #product .thumbs .image { margin-bottom: 15px; }
 #product .thumbs .image:nth-child(3n+4) { clear: left; }
 #product h3.collection-title {
-  font-family:avenir;
+  font-family:avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight:500;
@@ -1160,10 +1171,10 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 {% endif %}
 
 .product-options { padding: 20px 0 20px; margin-bottom: 15px; border-top: 1px {{ settings.border_style }} {{ settings.border_color }}; border-bottom: 1px {{ settings.border_style }} {{ settings.border_color }}; }
-.product-options label { font-family: avenir; display: block; margin-bottom: 3px; } 
+.product-options label { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif; display: block; margin-bottom: 3px; } 
 .product-options select { margin-bottom: 20px; }
 .product-options textarea { width: 30px; line-height: 18px; height: 18px; min-height: 18px; margin-bottom: 20px; }
-#quantity { font-family: avenir,helvetica, arial; color: rgb(99, 99, 99); width: 40px; margin-bottom: 20px; }
+#quantity { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif,helvetica, arial; color: rgb(99, 99, 99); width: 40px; margin-bottom: 20px; }
 @-moz-document url-prefix() { .product-options select { height: 30px; line-height: 30px; } } /* Firefox fix */
 
 #collection h1 { float: left; margin-left: 17px;}
@@ -1198,13 +1209,13 @@ div.errors, .subtext.error { font-weight: 700; color: #954040; }
 div.errors { margin-bottom: 15px; }
 .featured-cart-title { margin-left: 13px; }
 #cart tr.headers { font-style: italic; ;}
-#cart tbody { font-family: avenir; font-size: 15px; font-style: normal;}
+#cart tbody { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-style: normal;}
 
 /* 3.8 - Blog / Articles / Search */
 .sidebar { display:none;}
 .sidebar h3 { font-size: 18px; }
 .sidebar .article { margin: 0 0 15px; }
-.sidebar .article a { display: block; font-family: avenir;
+.sidebar .article a { display: block; font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 text-transform: uppercase;
 font-size: 11px; }
 .sidebar .article p { letter-spacing:1.5px; }
@@ -1420,7 +1431,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .lookbook-flexslider { margin-top: 40px; }
 .lookbook-flexslider .flex-direction-nav li .next { right: -50px; }
 .lookbook-flexslider .flex-direction-nav li .prev { left: -50px; }
-.lookbook-flexslider p { line-height: 1em; margin-top: 30px; text-align: center; font-family: adobe garamond pro; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
+.lookbook-flexslider p { line-height: 1em; margin-top: 30px; text-align: center; font-family: adobe garamond pro, times, times new roman, serif; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
 .lookbook-flexslider img { 
   border: 1px solid #DBDBDB; 
 -webkit-box-shadow: 2px 3px 5px rgb(209, 209, 209); 
@@ -1434,13 +1445,13 @@ box-shadow: 2px 3px 5px rgb(209, 209, 209);
 .press-flexslider .flex-direction-nav li .prev { left: -20px; }
 .press-flexslider h1 { line-height: 20px;}
 .press-flexslider h3 { font-weight: 400; }
-.press-flexslider p { line-height: 1em; text-align: center; font-family: adobe garamond pro; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
+.press-flexslider p { line-height: 1em; text-align: center; font-family: adobe garamond pro, times, times new roman, serif; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
 
 /* press module */
 .press h1 { line-height: 20px; font-size: 25px;}
 .press h3 { font-weight: 300; line-height: 18px; }
 .press a { display: block; margin-bottom: 30px;}
-.press p { margin-top: 15px; margin-bottom: 30px; line-height: 1.5em; text-align: center; font-family: adobe garamond pro; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
+.press p { margin-top: 15px; margin-bottom: 30px; line-height: 1.5em; text-align: center; font-family: adobe garamond pro, times, times new roman, serif; font-style: italic; font-size: 16px; color: rgb(134, 134, 134); letter-spacing: .5px;}
 
 {% if settings.slideshow_arrows == "dark" %}
 /* Dark Direction Nav */
