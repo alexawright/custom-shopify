@@ -4,18 +4,10 @@
 </div>
 
 <div class="row press-logos pull-center">
-    <a href="/pages/press/#women">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/vogue.png?16579">
-    </a>
-    <a href="/pages/press/#women">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/lucky.png?16579">
-    </a>
-    <a href="/pages/press/#women">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/wwd.png?16579">
-    </a>
-    <a href="/pages/press/#women">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/nymag.png?16667">
-    </a>
+      <img src="{{ 'vogue.png' | asset_url }}" />
+      <img src="{{ 'lucky.png' | asset_url }}" />
+      <img src="{{ 'wwd.png' | asset_url }}" />
+      <img src="{{ 'nymag.png' | asset_url }}" />
 </div>
 
 <hr class="divider">
@@ -23,8 +15,8 @@
 <div class="row">
   <div class="col-xs-12 press pull-center">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/press-vogue.jpg?16277" alt="Katy Perry Vogue" class="press-image"/>
+    <a href="/products/{{ 'fiona-ring' | product.handle }}" target="_blank">
+      <img src="{{ 'press-vogue.jpg' | asset_url }}" alt="Katy Perry Vogue" class="press-image"/>
       <h1>Vogue</h1>
       <h3>Editorial featuring Katy Perry photographed by Annie Leibovitz, June 2013</h3>
       <p>Purchase Fiona Ring &raquo;</p>
@@ -32,8 +24,8 @@
 
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/wwd-feature.jpg?16260" alt="Women's Wear Daily" class="press-image"/>
+    <a href="/products/{{ 'cia-studs' | product.handle }}" target="_blank">
+      <img src="{{ 'wwd-feature.jpg' | asset_url }}" alt="Women's Wear Daily" class="press-image"/>
       <h1>Women's Wear Daily</h1>
       <h3>October 2012</h3>
       <p>Purchase Cia Studs &raquo;</p>
@@ -41,18 +33,23 @@
 
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/press-globemail.jpg?16291" alt="The Globe &amp; Mail" class="press-image"/>
+      <img src="{{ 'press-globemail.jpg' | asset_url }}" alt="The Globe &amp; Mail" class="press-image"/>
       <h1>The Globe & Mail</h1>
       <h3>June 2013</h3>
-      <p>Purchase Camilla Stacking Rings &raquo;<br/>
-      Purchase Lace Rings &raquo;</p>
-    </a>
+      <p>
+        <a href="/products/{{ 'camille-ring' | product.handle }}" target="_blank">
+          Purchase Camille Stacking Rings &raquo;
+        </a>
+        <a href="/products/{{ 'lace-ring' | product.handle }}" target="_blank"> 
+          Purchase Lace Rings &raquo;
+        </a>
+      </p>
+
 
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/press-lucky.jpg?16307" alt="The Globe &amp; Mail" class="press-image"/>
+    <a href="/products/{{ 'tavion-necklace' | product.handle }}" target="_blank">
+      <img src="{{ 'press-lucky.jpg' | asset_url }}" alt="The Globe &amp; Mail" class="press-image"/>
       <h1>Lucky Magazine</h1>
       <h3>March 2013</h3>
       <p>Purchase Tavion Necklace &raquo;</p>
@@ -60,8 +57,8 @@
     
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/press-whistle.jpg?16353" alt="The Globe &amp; Mail" class="press-image"/>
+    <a href="/products/{{ 'collette-ring' | product.handle }}" target="_blank">
+      <img src="{{ 'press-whistle.jpg' | asset_url }}" alt="The Globe &amp; Mail" class="press-image"/>
       <h1>News Whistle</h1>
       <h3>Fall Fashion Transitions, September 2013</h3>
       <p>Purchase Collette Ring &raquo;</p>
@@ -69,8 +66,8 @@
 
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/press-kenton.jpg?16347" alt="Kenton Magazine" class="press-image"/>
+    <a href="/products/{{ 'cobra-cuff' | product.handle }}" target="_blank">
+      <img src="{{ 'press-kenton.jpg' | asset_url }}" alt="Kenton Magazine" class="press-image"/>
       <h1>Kenton Magazine</h1>
       <h3>Top 10 Women’s Music Festival Style Staples, April 2012</h3>
       <p>Purchase Cobra Cuff &raquo;</p>
@@ -78,13 +75,17 @@
 
     <hr class="divider">
 
-    <a href="http://gromn.myshopify.com/products/white-tank-1" target="blank">
-      <img src="https://cdn.shopify.com/s/files/1/0271/2135/t/2/assets/unrulythings.jpg?16787" class="press-image" alt="Unruly Things"/>
+      <img src="{{ 'unrulythings.jpg' | asset_url }}" class="press-image" alt="Unruly Things"/>
       <h1>Unruly Things</h1>
       <h3>December 2010</h3>
-      <p>Purchase Camille Stacking Rings &raquo;<br/>
-      Purchase Camille Studs &raquo;</p>
-    </a>
+      <p>
+        <a href="/products/{{ 'camille-ring' | product.handle }}" target="_blank">
+          Purchase Camille Stacking Rings &raquo;
+        </a>
+        <a href="/products/{{ 'camille-studs-with-diamonds' | product.handle }}" target="_blank">
+          Purchase Camille Studs &raquo;
+        </a>
+      </p>
 
 
   </div>
