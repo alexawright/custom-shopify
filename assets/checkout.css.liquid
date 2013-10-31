@@ -108,12 +108,21 @@ h1 span.subtitle { font-size:{{ settings.body_font_size }}; font-weight:400; }
 }
 #addresses input { 
   border: 1px solid #ccc; 
-  background: white; 
+  background: rgb(250, 250, 250);
   width: 100%; 
   padding:2px 8px;
   font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
 } 
+#addresses .gleft {
+  width: 47%;
+}
+#addresses .gright {
+  width: 47%;
+}
+#email input {
+  background: rgb(250, 250, 250) !important;
+}
 #cancel-purchase, #cancel-purchase a {
   font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -146,6 +155,13 @@ h1 span.subtitle { font-size:{{ settings.body_font_size }}; font-weight:400; }
   font-weight: 500;
   letter-spacing: .5px;
   font-style: italic;
+}
+.field-with-errors { 
+  padding: 20px;
+}
+.field-with-errors .error-message { 
+  font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 #thumbs span { 
   font-size: 12px;
@@ -199,7 +215,7 @@ h1 span.subtitle { font-size:{{ settings.body_font_size }}; font-weight:400; }
 #buttons input:hover { background-color:{{ settings.shop_btn_hover_color }}; color:{{ settings.shop_btn_hover_text_color }}; }
 #buttons small { line-height:40px; margin-left:10px; font-size:12px; }
 .group label { line-height:24px; }
-span.sign-in-message { line-height:28px; }
+span.sign-in-message { line-height:28px; font-family: avenir, helvetica, sans serif;}
 
 #discount_code { display: block; margin-bottom: 5px; }
 #discounts-body { margin-bottom: 20px; }
@@ -208,6 +224,7 @@ span.sign-in-message { line-height:28px; }
 #tagline .subtitle {display:block; padding-bottom:0px;}
 
 {% if settings.use_logo %}
+#tagline {text-align: center;}
 #tagline .subtitle:before {display:block; content: url('{{ "logo_medium.png" | asset_url }}'); padding-bottom:15px; border-bottom:1px {{ settings.nav_border_style }} {{ settings.nav_border_bottom_color }}; }
 #tagline .title {display:none;}
 {% endif %}
