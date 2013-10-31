@@ -13,13 +13,11 @@
 <div class="row where_to_buy">
   <h7>The Vanessa Lianne Custom & Commitment Fine Jewelry Collection</h7>
 </div>
+{% assign content = page.content | split: '<!-- split -->' %}
 
 <div class="row">
   <div class="col-sm-12 custom">
-    <p>
-     Vanessa loves working with clients to design exquisite custom pieces for their bridal and special occasions. 
-     Handcrafted from the finest materials with a focus on sustainability, all pieces are made from 100% recycled metal and use the highest quality conflict-free stones. Fusing her unique design sensibilities with her keen attention to detail, Vanessa creates truly one-of-a-kind pieces that are original yet timeless.</p>
-     <p>Please <a href="http://gromn.myshopify.com/pages/contact-us">contact us</a> if you are interested in custom pieces for your special occasions.</p>
+    {{ content[0] }}
   </div>
 </div>
 
@@ -33,12 +31,10 @@
 
 <div class="row custom-testimonials">
   <div class="col-sm-6">
-    <p>"Working with Vanessa was a fantastic experience. She was recommended to us by good friends who had their engagement ring and wedding bands made by her. When we met her we immediately felt that she got us, and our vision for our wedding bands. The rings came out beautifully, I could barely wait until the wedding to wear mine! Throughout the process she was available and attentive to any questions and changes we had. I would absolutely recommend her to anyone, and would love to work with her again. She is a wonderful person and exceedingly talented artist."</p>
-    <h5>– Chris & Maggie Wetherbee </h5>
+    {{ content[1] }}
   </div>
   <div class="col-sm-6">
-    <p>"When my fiance and I set out to buy wedding bands, we realized how difficult it was to find something that was completely and uniquely us. Vanessa listened to what were looking for, and offered numerous ideas on how to incorporate meaningful elements that reflected each of our personalities and preferences. The result? Something so incredibly beautiful and also, personal to us. Wherever we go, everyone raves about how incredible our rings are. We couldn't be happier.</p>
-    <h5>– Alexandra Ostrow & Ron Beach</h5> 
+    {{ content[2] }}
   </div>
 </div>
 
