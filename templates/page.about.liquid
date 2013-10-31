@@ -15,16 +15,10 @@
 </div>
 <div class="row">
   <div class="col-sm-6">
-    <p>
-      About Left Content
-      {{ page.page-aboutleft.content }}
-    </p>
+    {{ page.content | split: '<!-- split -->' | first }}
   </div>
   <div class="col-sm-6">
-    <p>
-      About Right Content
-      {{ pages.page-aboutright.content }}
-    </p>
+    {{ page.content | split: '<!-- split -->' | last }}
   </div>
 </div>
 
