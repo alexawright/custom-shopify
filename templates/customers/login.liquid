@@ -1,7 +1,7 @@
 {% layout settings.customer_layout %}
 <div id="customer-login">
   <div class="row">
-    <div id="login" class="col-sm-7">
+    <div id="login" class="col-sm-4 col-sm-offset-4 login-form">
       <h2 class="title">Login</h2>
 
       {% form 'customer_login' %}
@@ -23,24 +23,26 @@
       {% endform %}
     </div>
     
-    <div id="recover-password" style="display:none;" class="col-sm-7">
-      <h2>Reset Password</h2>
-      <p class="note">We will send you an email to reset your password.</p>
+    <div id="recover-password" style="display:none;" class="login-form col-sm-4 col-sm-offset-4">
+      <h2 class="title">Reset Password</h2>
+      <p>We will send you an email to reset your password.</p>
 
       {% form 'recover_customer_password' %}
       {{ form.errors | default_errors }}
 
       <label for="email" class="label">Email Address</label>
       <input type="email" value="" size="30" name="email" id="recover-email" class="text" />
-
-      <input class="btn" type="submit" value="Submit" />
-      <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
+      
+      <div class="action_bottom">
+        <input class="btn" type="submit" value="Submit" />
+        <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
+      </div>
       {% endform %}
     </div>
     
     {% if shop.checkout.guest_login %}
-    <div id="guest" class="col-sm-5">
-      <h2>Guest Login</h2>
+    <div id="guest" class="login-form col-sm-4 col-sm-offset-4">
+      <hr class="divider">
       {% form 'guest_login' %}
       <input class="btn" type="submit" value="Continue as Guest" />
       {% endform %}

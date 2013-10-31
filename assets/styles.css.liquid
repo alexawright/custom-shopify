@@ -272,7 +272,8 @@ select {
   border-radius:1px; 
   -webkit-appearance: none;
   padding: 2px 40px 3px 10px;
-  background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) no-repeat 95% white;
+  background: url(//d1o3iv2jf8yo4h.cloudfront.net/assets/select-caret-096b4edbdf63191234b4ef15922f848d.png) 95% no-repeat white;
+
 }
 @-moz-document url-prefix() { select { padding:6px;  } } /* Firefox fix */
 select:focus, select.focus { 
@@ -304,7 +305,7 @@ ul {
 
 h1,h2,h3,h4,h5,h6 { font-weight:{{ settings.header_weight }}; color:{{ settings.header_color }}; margin:0 0 13px 0; text-transform:{{ settings.header_font_style }}; font-family:{{ settings.header_font }}; }
 {% if settings.google_header_font != "none" %}
-h1,h2,h3,h4,h5,h6,.cart-summary, .toolbar { font-family: {{ settings.google_header_font | replace: '+', ' ' }}, {{ settings.header_font }}; }
+h1,h2,h3,h4,h5,h6,.cart-summary, .toolbar { margin-top: -10px; font-family: {{ settings.google_header_font | replace: '+', ' ' }}, {{ settings.header_font }}; }
 {% endif %}
 h1 { 
   font-family: adobe garamond pro, times, times new roman, serif;
@@ -321,7 +322,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 200;
-  text-align: right;
   width: 300px;
   margin: 0 auto 31px;
   line-height: 35px;}
@@ -856,6 +856,7 @@ footer { width: 100%; margin: 0 auto; }
   font-style: normal;
 }
 .product-categories h1 { 
+  margin-top: 10px;
   text-align:center; 
   font-size: 13px; 
   font-weight: 600;
@@ -1095,7 +1096,7 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 
 
 /* 3.5 - Homepage */
-.intro h2 { display:none;
+.intro h2 { 
   font-size: 14px; 
   margin-bottom: 20px; 
   text-align: center; 
@@ -1158,9 +1159,11 @@ footer .tweet_text a:hover { color: {{ settings.footer_link_hover_color }} !impo
 }
 .purchase-btn { text-align: right; }
 .purchase h2.price { margin: 0 10px 0; display: block; font-size: 20px !important; text-align: left; color: #525252; }
-.details .price { color: {{ settings.price_color }}; }
+.details .price { color: #777777;
+font-size: 16px;
+line-height: 1.7em; }
 #product .form-group { display: block;}
-#product .form-group label { line-height: 35px; float: left; margin:0 20px 0 20px;}
+#product .form-group label { display: none; margin: 0 10px 0 0; line-height: 35px; float: left; }
 #product .featured { margin-bottom: 15px; text-align: center; }
 #product .featured img { width: 100% !important;}
 #product .description { font-size: 12px; margin-bottom: 15px; font-family: avenir; font-weight: 200; line-height:1.8em;}
@@ -1222,7 +1225,10 @@ div.errors, .subtext.error { font-weight: 700; color: #954040; }
 div.errors { margin-bottom: 15px; }
 .featured-cart-title { margin-left: 13px; }
 #cart tr.headers { font-style: italic; ;}
-#cart tbody { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-style: normal;}
+#cart tbody { font-family: avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+font-size: 15px; font-style: normal;}
+#cart tbody .price { font-family: adobe garamond pro, times new roman, times, serif; 
+font-size: 25px; font-style: normal;}
 
 /* 3.8 - Blog / Articles / Search */
 .sidebar { display:none;}
@@ -1280,7 +1286,10 @@ font-size: 11px; }
   padding: 0;
 }
 #customer-account p, #customer-order p { line-height: 14px; }
-#login input.text { width: 220px; }
+.login-form .title { text-align: left; margin: 10px 0;}
+.login-form .label, .login-form a, .login-form .note { font-family: avenir; margin-bottom: 5px;}
+.login-form .note { margin: 10px;}
+.login-form input.text { padding: 20px 10px; width: 100%;}
 #customer-activate .create-password { margin-bottom: 30px; }
 #customer-activate .label, #customer-login .label, #customer-reset-password .label, #customer-register .label { display: block; }
 #customer-activate .text, #customer-login .text, #customer-reset-password .text, #customer-register .text { display: block; margin-bottom: 15px; }
@@ -1398,7 +1407,7 @@ font-size: 11px; }
   footer #mail { width: 189px; }
   footer #mail input:-webkit-input-placeholder { line-height: 30px; }
   #blog .sidebar { display: none; }
-  #product .title { font-size: 15px; }
+  #product .title { font-size: 13px; color: rgb(49, 49, 49);}
   #product .featured { margin-bottom: 15px; }
   #product .thumbs { margin: 0 0 30px 0; }
   #product .thumbs .image a { max-width: 60px; float: left; margin: 0 15px 0 0; }
