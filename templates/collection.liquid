@@ -3,11 +3,10 @@
   {% paginate collection.products by settings.pagination_limit %}
   <!-- Begin collection info -->
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-8">
       
       <!-- Begin breadcrumb -->
       <div class="breadcrumb clearfix">
-        <span class="arrow-space">&#62;</span>
         <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="url"><span itemprop="title">{{ collection.title }}</span></a></span>       
         
         {% if current_tags %}
@@ -28,22 +27,11 @@
         {% if settings.collection_tags %}
           {% capture col_url%}{% if collection.url.size == 0 %}/collections/all{%else%}{{collection.url}}{%endif%}{%endcapture%}
           {% if collection.all_tags.size > 0 %}
+          {% endif %}
         {% endif %}
       </div>
       <!-- End sort collection -->
       
-    <div class="clearfix">
-      {% if collection.all_tags.size > 0 %}
-        <div class="browse-tags">
-          <select name="collection_tags" id="collection_tags" class="loc_on_change">
-            <option value="{{ col_url }}">All items</option>
-            {% for tag in collection.all_tags %}
-              <option value="{{col_url}}/{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{%endif%}>{{ tag }}</option>
-            {% endfor %}
-          </select>
-        </div>
-        {% endif %}
-    </div>
       
       <!-- Begin collection description -->
       {% if collection.description != "" %}
@@ -51,6 +39,18 @@
       {% endif %}
       <!-- End collection description -->
       
+    </div>
+    <div class="col-sm-4">
+    {% if collection.all_tags.size > 0 %}
+      <div class="browse-tags">
+        <select name="collection_tags" id="collection_tags" class="loc_on_change">
+          <option value="{{ col_url }}">All items</option>
+          {% for tag in collection.all_tags %}
+            <option value="{{col_url}}/{{ tag | handle }}"{% if current_tags contains tag %} selected="selected"{%endif%}>{{ tag }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
     </div>
   </div>
 

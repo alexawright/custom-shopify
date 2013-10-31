@@ -18,7 +18,7 @@
     </div>
     <!-- End breadcrumb -->
     <!-- Begin product photos -->
-    <div class="{% if product.images.size == 1 or settings.thumbnails_position == 'below' %}col-sm-8{% else %}col-sm-5{% endif %}">
+    <div class="{% if product.images.size == 1 or settings.thumbnails_position == 'below' %}col-sm-8{% else %}col-sm-6{% endif %}">
       
       <!-- Begin featured image -->
       <div class="image featured">
@@ -91,7 +91,7 @@
     
     
     <!-- Begin description -->
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       
       <h1 class="title">{{ product.title }}</h1>
       

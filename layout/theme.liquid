@@ -60,27 +60,22 @@
   
   <!-- Begin toolbar -->
   <div class="toolbar-wrapper">
-    <div class="toolbar clearfix">
-      <div class="col-xs-12 clearfix">
-        <ul class="unstyled">
-          <li class="search-field">
-            <form class="search" action="/search">
-              <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
-              <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" />
-            </form>
-          </li> 
-          {% if cart.item_count != 0 %}
-          <li id="checkout-link"><a href="/cart" title="Checkout">Checkout</a></li>
-          {% endif %}
-          <li><span class="icon-cart"></span><a href="/cart" class="cart" title="Shopping Cart">Cart: {{ cart.item_count }}</a></li>
-          {% include 'customer_links' %}
-          {% if settings.top_bar_linklist != blank %}
-          {% for link in linklists[settings.top_bar_linklist].links %}
-          <li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>
-          {% endfor %}
-          {% endif %}
-        </ul>
-      </div>
+    <div class="col-xs-6 login-links toolbar">
+    {% include 'customer_links' %}
+    </div>
+    <div class="toolbar col-xs-6">
+      <ul class="unstyled">
+        <li class="search-field">
+          <form class="search" action="/search">
+            <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+            <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" />
+          </form>
+        </li> 
+        {% if cart.item_count != 0 %}
+        <li id="checkout-link"><a href="/cart" title="Checkout">Checkout</a></li>
+        {% endif %}
+        <li><span class="icon-cart"></span><a href="/cart" class="cart" title="Shopping Cart">Cart: {{ cart.item_count }}</a></li>
+      </ul>
     </div>
   </div>
   <!-- End toolbar -->
